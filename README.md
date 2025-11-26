@@ -40,9 +40,9 @@ STM32F103C8T6 ("Blue Pill"):
 Преобразователь USB-UART CH340G:
 **TX и GND** USB-UART к **PA9 и GND** Blue Pill
 ```
-- [Монтажная схема](https://github.com/user-attachments/assets/d8eca711-790c-481c-9e2c-182399bc5016)
-- [Подключение ST-LINK V2](https://github.com/user-attachments/assets/11cf20ef-1757-43f4-bd80-f0e9caa32841)
-- [Подключение USB-UART CH340G](https://github.com/user-attachments/assets/635f70f6-237e-441c-b5aa-54983d74e659)
+- [Монтажная схема](./docs/FritzingDiagram.png)
+- [Подключение ST-LINK V2](./docs/STLinkV2.jpg)
+- [Подключение USB-UART CH340G](./docs/usbUART.jpg)
 
 ## Конфигурация (из CubeMX)
 
@@ -53,7 +53,7 @@ STM32F103C8T6 ("Blue Pill"):
 
 АЦП сконфигурирован для считывания аналогового напряжения с канала ADC1_IN1 (подключенного к выводу PA1), к которому между 3,3В и GND подключен потенциометр.
 
-- [Конфигурация в CubeMX](https://github.com/user-attachments/assets/9efbe196-3f7a-48ba-95bf-639f2d71ce29)
+- [Конфигурация ADC в CubeMX](./docs/CubeMXConfigurationADC.jpg)
 
 На STM32F103C8T6 (и вообще на большинстве STM32F1) разрешение АЦП (ADC) фиксировано и составляет 12 бит. Это значит, что значения, возвращаемые АЦП, находятся в диапазоне от 0 до 4095. Таким образом:
 - Максимальное значение АЦП = 2^12 - 1 = 4095.
